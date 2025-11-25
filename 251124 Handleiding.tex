@@ -1,0 +1,228 @@
+\documentclass[12pt, letterpaper]{report}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{siunitx}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[most]{tcolorbox}
+\usepackage{fontawesome5}
+
+\newtcolorbox{warningbox}{
+	colback=red!10,
+	colframe=red!70!black,
+	coltitle=white!80!black,
+	fonttitle=\bfseries,
+	left=5pt,
+	right=5pt,
+	top=5pt,
+	bottom=5pt,
+	sharp corners,
+	enhanced,
+	title=\faExclamationTriangle\  Let op!,
+}
+
+\newtcolorbox{informationbox}{
+	colback=blue!10,
+	colframe=blue!70!black,
+	coltitle=white!80!black,
+	fonttitle=\bfseries,
+	left=5pt,
+	right=5pt,
+	top=5pt,
+	bottom=5pt,
+	sharp corners,
+	enhanced,
+	title=\faQuestion\  Informatie,
+}
+
+\lstdefinestyle{mystyle}{
+	basicstyle=\ttfamily\small,   % monospaced font
+	keywordstyle=\color{blue},
+	commentstyle=\color{green!50!black},
+	stringstyle=\color{red},
+	numbers=left,
+	numberstyle=\tiny,
+	stepnumber=1,
+	numbersep=5pt,
+	breaklines=true,
+	breakatwhitespace=true,
+	showstringspaces=false,
+	frame=single,                 % adds a frame around code
+	tabsize=4
+}
+
+\lstset{style=mystyle}
+
+
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries}{}{0pt}{}
+
+
+\begin{document}
+	\title{Handleiding Mobiele Windgenerator\\
+    \small Project 5-6 Hogeschool Rotterdam Technische Informatica\\
+	\small Gemaakt in opdracht van MIND}
+	\author{\small Gemaakt door Hannah Saunders, Berkin Demirel, Sem Hoogstad en Mike Verkaik}
+	\date{19 November 2025}
+	\maketitle
+	
+	\newpage
+	\tableofcontents
+	
+	\newpage
+	\chapter{Inleiding}
+	Deze handleiding is gemaakt voor de Mobiele Windgenerator van MIND (Military Innovation by Doing) en bestaat uit drie delen. Het algemene deel, het technische deel (ICT) en de Installatiehandleiding. 
+	\\
+	\\
+	Het algemene deel is bedoeld voor snelle oplossingen en algemene info (denk aan het aansluiten van de generator, eventuele kleine storingen/fouten oplossen, enz.). 
+	\\
+	\\
+	Het technische doel is bedoeld voor grootschalig onderhoud aan de apparatuur. Denk hierbij aan het updaten van software, aanpassen van verschillende instellingen enz. 
+	\\
+	\\
+	De Installatiehandleiding is gemaakt voor wanneer de windgenerator vanaf 0 wordt opgebouwd.
+	
+	\newpage
+	\chapter{Algemene Handleiding}
+	\setcounter{section}{1}
+	\section{Aansluiten en opstarten van de generator}
+	De windgenerator wordt aangesloten aan de aansturingskast. Hier zitten vier verschillende poorten op. De stekker die van de windgenerator af komt past maar op een van deze poorten, namelijk de poort gelabeld \textbf{“GEN IN”}. 
+	\\
+	\\
+	Schakel vervolgens het systeem in. Dit kan worden gedaan via de schakelaar \textbf{“SYSTEM”} worden gedaan. Zodra deze omgehaald is zal het scherm op de aansturingskast opstarten en zullen alle interne systemen opstarten. 
+	\\
+	\\
+	Haal vervolgens de schakelaar \textbf{“GENERATOR”} op de aansturingskast om naar de RUN positie. De windgenerator is nu klaar om gebruikt te worden. Via de schuko aansluiting op de aansturingskast (gelabeld \textbf{“POWER OUT”}) kan 230v AC verkregen worden vanuit de batterijen. 
+	
+	\section{Opladen via Netspanning}
+	De generator is ook op te laden via netspanning. Hiervoor zit de \textbf{“POWER IN”} poort op de aansturingskast. Hiermee kunnen d.m.v. een schuko naar IEC C13 snoer de interne batterijen worden opgeladen. 
+	
+	\newpage
+	\section{Fouten, Foutcodes en andere problemen}
+	\subsection{Geen 230v AC te verkrijgen}
+	Dit betekent dat de batterijen niet voldoende opgeladen zijn en het systeem het ontladen van de batterijen uitschakelt. Laat de batterijen ophalen totdat er op het remote dashboard staat dat het systeem weer klaar is om energie te leveren. 
+	
+	\subsection{Verbinding verbroken tussen inverter/Batterij beheer }
+	Zodra er een melding met de beschrijving \textbf{“Connection to BMS lost”} verschijnt op het scherm van de aansturingskast, betekent dit dat de verbinding tussen de inverter, de BMS en het beheersysteem verbroken is. Dit is op te lossen door te controleren of alle netwerkkabels nog verbonden zijn aan de correcte poorten. Zie ‘Schematische tekeningen systeem’ voor de handleiding/tekening hoe dit aan te sluiten is 
+	
+	\subsection{Batterijen laden niet op}
+	Dit kan komen doordat een van de zekeringen is gesprongen in de aansturingskast. Deze zijn makkelijk te resetten. Er zijn in de aansturingskast in totaal 4 zekeringen: 
+	\begin{itemize}
+		\item Een zekering tussen de generator en de aanvoer naar de charge controller 
+		\item Een zekering tussen de charge controller en de batterijen 
+		\item Een zekering tussen de Power In poort en de Inverter 
+		\item Een zekering tussen de Power Out poort en de Inverter 
+	\end{itemize}
+	Zodra deze gereset zijn zullen de batterijen weer opladen. 
+	
+	\begin{informationbox}
+		Blijft de generator storingen melden? Neem dan contact op met MIND.
+	\end{informationbox}
+	
+	\newpage
+	\section{Schematische tekeningen systeem}
+	\subsection{Elektrisch schema/algemeen schema}
+	Hieronder een schematische tekening van de opbouw en aansluitingen van het interne systeem. 
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.0\textwidth]{Elektrisch-schema.png}
+		\caption{Elektrisch schema van de windgenerator}
+		\label{fig:ElektrischSchema}
+	\end{figure}
+	
+	\subsection{Aansluiting Netwerkkabels}
+	Op de Victron VE.Bus BMS v2 zitten 2 netwerkpoorten. De \textbf{“Remote Panel”} poort en de \textbf{“Multiplus/Quatro”} poort. Verbindt de \textbf{“Remote Panel”} poort met een van de \textbf{ BUS”} poorten op het beeldscherm wat op de aansturingskast gemonteerd zit. Verbindt de \textbf{“Multiplus/Quatro”} poort aan de Multiplus Inverter. Hierop zit maar 1 netwerkpoort 
+	
+	\newpage
+	
+	\chapter{Technische Handleiding}
+	Dit deel van de handleiding is voor het installeren van alle digitale onderdelen van het project. Dit moet worden gedaan door een van de medewerkers van MIND of medewerkers van de ICT. 
+	\section{Raspberry PI}
+	\subsection{Flashing PI-OS}
+	\begin{itemize}
+		\item Stap 1: Download de Raspberry PI Imager en installeer deze op een computer.
+		\item Stap 2: Stop een Micro-SD kaart van minimaal 32gb in de computer (Niet de PI) 
+		\item Stap 3: Open Raspberry PI Imager. Selecteer hier de SD kaart en vervolgens het operating system wat je wilt installeren (Raspberri PI OS) 
+		\item Stap 4: Klik op \textbf{“Next”} en vervolgens op \textbf{“Edit Settings”}
+		\item Stap 5a: Onder \textbf{“General”} zet je de naam op \textbf{“raspberry.local”} (hoofdlettergevoelig). Stel zelf de gebruikersnaam en het wachtwoord in. Let op! Dit zijn de inloggegevens van de Raspberri PI zelf en ook van de SSH service.
+		\item Stap 5b: Onder \textbf{“Services”} zet je de SSH Service aan. Zorg ook dat \textbf{“Use password as authentication”} checkbox aangevinkt staat. 
+		\item Stap 6: Klik op \textbf{“Save”}, en vervolgens op \textbf{“Next”} om te starten met het flashen van Raspberry PI OS.  
+		\item Stap 7: Zodra de Raspberry PI Imager klaar is met het flashen van Raspberry PI OS kan je de Micro-SD kaart veilig ejecten.
+	\end{itemize}
+	
+	\section{Docker}
+	\subsection{Installatie van de Docker Container}
+	\begin{itemize}
+		\item Stap 1:  Verifieer dat Docker is geïnstalleerd doormiddel van het uitvoeren van: \begin{lstlisting}[language=Bash, caption={Verifying that docker is installed}]
+			docker -v
+		\end{lstlisting} Dan moet je iets zien van Docker version 27.1.1, build 6312585. 
+		
+		\item Stap 2: Zet ...
+	\end{itemize}
+	
+	\newpage
+	
+	\chapter{Installatiehandleiding}
+	\begin{warningbox}
+		Dit deel van de handleiding is alleen voor medewerkers van MIND. Zorg daarom ook altijd dat er iemand van MIND aanwezig is als de generator opnieuw wordt opgebouwd
+	\end{warningbox}
+
+	
+	\section{Onderdelenlijst}
+	\begin{itemize}
+		\item 1x Superwind SW353
+		\item 1x Superwind SW353 Run/Stop schakelaar
+		\item 1x SCR Marine 12 Charge Controller
+		\item 1x 0,35 Ohm Load Resistor
+		\item 1x Victron Energy Multiplus 12 | 800 | 35
+		\item 2x Victron Energy Lithium 12.8V-50Ah Smart LiFePO4
+		\item 1x Victron Energy Ekrano GX
+		\item 1x Victron Energy VE.Bus BMS V2
+		\item 2x 30A zekering
+		\item Minstens 15m \SI{6}{\square\milli\meter} draad (15m per kleur)
+		\item 30cm \SI{2.5}{\square\milli\meter} draad (Rood)
+		\item 3x Cat 5e (of hoger) UTP kabels
+		\item 1x Stijgerbuis (60.3mm Diameter, minimaal 2m hoog)
+		\item 1x Stijgerbuis Voetstuk (60.3mm Diameter)
+		\item 1x Verzwaarde Voet
+		\item 1x Raspberry PI 5
+		\item 1x Raspberry PI 5 4g Hat
+		\item 1x \textit{\textbf{Unmanaged}} Netwerk Switch (min. 5 port)
+	\end{itemize}
+	
+	\newpage
+	\section{Bekabeling systeem}
+	\subsection{Elektra}
+	Hieronder twee figuren van hoe de elektra moet worden aangesloten. Het is belangrijk dat alles met \SI{6}{\square\milli\meter} draad wordt aangesloten (tenzij anders aangegeven).
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.0\textwidth]{ElektraBatterij.png}
+		\caption{Elektrisch Schema van de Batterijen}
+		\label{fig:ElektraBatterij}
+	\end{figure}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.0\textwidth]{ElektraGenerator.png}
+		\caption{Elektrisch Schema van de Generator}
+		\label{fig:ElektraGenerator}
+	\end{figure}
+	\begin{warningbox}
+		Raadpleeg voor het installeren en aansluiten van de windgenerator de handleiding
+		voor de Superwind SW353. Deze is te vinden op de website van SuperWind en zal ook
+		worden meegeleverd met het product zelf.
+	\end{warningbox}
+	\newpage
+	\subsection{Netwerk en Data}
+		\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.0\textwidth]{DataEnNetwerk.png}
+		\caption{Schema van Netwerk en Data}
+		\label{fig:DataEnNetwerk}
+	\end{figure}
+	\begin{informationbox}
+		De datakabels van de 2 batterijen zitten standaard aan de batterij vast. De batterijen moeten aan elkaar doorgelust worden met een male en female stekker. De andere twee overblijvende stekkers moeten aan de VE.Bus BMS V2 worden verbonden.
+	\end{informationbox}
+	
+	
+\end{document}
