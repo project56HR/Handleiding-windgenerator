@@ -1,21 +1,21 @@
-\contentsline {chapter}{\numberline {1}Inleiding}{2}{}%
-\contentsline {chapter}{\numberline {2}Algemene Handleiding}{3}{}%
-\contentsline {section}{\numberline {2.2}Aansluiten en opstarten van de generator}{3}{}%
-\contentsline {section}{\numberline {2.3}Opladen via Netspanning}{3}{}%
-\contentsline {section}{\numberline {2.4}Fouten, Foutcodes en andere problemen}{4}{}%
-\contentsline {subsection}{\numberline {2.4.1}Geen 230v AC te verkrijgen}{4}{}%
-\contentsline {subsection}{\numberline {2.4.2}Verbinding verbroken tussen inverter/Batterij beheer }{4}{}%
-\contentsline {subsection}{\numberline {2.4.3}Batterijen laden niet op}{4}{}%
-\contentsline {section}{\numberline {2.5}Schematische tekeningen systeem}{5}{}%
-\contentsline {subsection}{\numberline {2.5.1}Elektrisch schema/algemeen schema}{5}{}%
-\contentsline {subsection}{\numberline {2.5.2}Aansluiting Netwerkkabels}{5}{}%
-\contentsline {chapter}{\numberline {3}Technische Handleiding}{6}{}%
-\contentsline {section}{\numberline {3.1}Raspberry PI}{6}{}%
-\contentsline {subsection}{\numberline {3.1.1}Flashing PI-OS}{6}{}%
-\contentsline {section}{\numberline {3.2}Docker}{6}{}%
-\contentsline {subsection}{\numberline {3.2.1}Installatie van de Docker Container}{6}{}%
-\contentsline {chapter}{\numberline {4}Installatiehandleiding}{7}{}%
-\contentsline {section}{\numberline {4.1}Onderdelenlijst}{7}{}%
-\contentsline {section}{\numberline {4.2}Bekabeling systeem}{8}{}%
-\contentsline {subsection}{\numberline {4.2.1}Elektra}{8}{}%
-\contentsline {subsection}{\numberline {4.2.2}Netwerk en Data}{9}{}%
+\contentsline {chapter}{\numberline {1}Inleiding}{2}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Algemene Handleiding}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.2}Aansluiten en opstarten van de generator}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Opladen via Netspanning}{3}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Fouten, Foutcodes en andere problemen}{4}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Geen 230v AC te verkrijgen}{4}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Verbinding verbroken tussen inverter/Batterij beheer }{4}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Batterijen laden niet op}{4}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Schematische tekeningen systeem}{5}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Elektrisch schema/algemeen schema}{5}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Aansluiting Netwerkkabels}{5}{subsection.2.5.2}%
+\contentsline {chapter}{\numberline {3}Technische Handleiding}{6}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Raspberry PI}{6}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Flashing PI-OS}{6}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Docker}{6}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Installatie van de Docker Container}{6}{subsection.3.2.1}%
+\contentsline {chapter}{\numberline {4}Installatiehandleiding}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Onderdelenlijst}{7}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Bekabeling systeem}{8}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Elektra}{8}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Netwerk en Data}{9}{subsection.4.2.2}%
