@@ -9,6 +9,7 @@
 \usepackage{fontawesome5}
 \usepackage{hyperref}
 \usepackage{colortbl}
+\usepackage{subcaption}
 
 \newtcolorbox{warningbox}{
 	colback=red!10,
@@ -88,18 +89,34 @@
 	\newpage
 	\chapter{Algemene Handleiding}
 	\section{Aansluiten en opstarten van de generator}
-	De windgenerator wordt aangesloten aan de aansturingskast. Hier zitten vier verschillende poorten op. De stekker die van de windgenerator af komt past maar op een van deze poorten, namelijk de poort gelabeld \textbf{“GEN IN”}. 
-	\\
-	\\
-	Schakel vervolgens het systeem in. Dit kan worden gedaan via de schakelaar \textbf{“SYSTEM”} worden gedaan. Zodra deze omgehaald is zal het scherm op de aansturingskast opstarten en zullen alle interne systemen opstarten. 
-	\\
-	\\
-	Haal vervolgens de schakelaar \textbf{“GENERATOR”} op de aansturingskast om naar de RUN positie. De windgenerator is nu klaar om gebruikt te worden. Via de schuko aansluiting op de aansturingskast (gelabeld \textbf{“POWER OUT”}) kan 230v AC verkregen worden vanuit de batterijen. 
-    \\
+	De windgenerator wordt aangesloten aan de aansturingskast. Hier zitten vier verschillende poorten op. De stekker die van de windgenerator af komt past maar op een van deze poorten, namelijk de poort gelabeld \textbf{“GEN IN”}.  zie afbeelding (a) hieronder
+\begin{figure}[h]
+\begin{subfigure}{0.5\linewidth}
+\includegraphics[width=1.2\linewidth, height=8cm]{.jpg} 
+\caption{aansturings kast}
+\label{fig:aansturings kast}
+\end{subfigure}
+\begin{subfigure}{0.5\linewidth}
+\centering
+\includegraphics[width=0.5\linewidth, height=8cm]{systeemShakelaar.jpg}
+\caption{systeem schakelaar}
+\label{fig:systeem schakelaar}
+\end{subfigure}
+\end{figure}
+
     
-    % \includegraphics[width=1.0\textwidth]{}
-    % \caption{afbeelding aansturingskast en benoemde poorten}
-	
+    Schakel vervolgens het systeem in. Dit kan worden gedaan via de schakelaar \textbf{“SYSTEM”} worden gedaan. Zodra deze omgehaald is zal het scherm op de aansturingskast opstarten en zullen alle interne systemen opstarten. zie afbeelding (b) hierboven
+    \\
+    \\
+	Haal vervolgens de schakelaar \textbf{“GENERATOR”} op de aansturingskast om naar de RUN positie. De windgenerator is nu klaar om gebruikt te worden. Via de schuko aansluiting op de aansturingskast (gelabeld \textbf{“POWER OUT”}) kan 230v AC verkregen worden vanuit de batterijen. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.25\linewidth]{schakelaar.jpg}
+    \caption{Enter Caption}
+    \label{fig:placeholder}
+\end{figure}
+	\newpage
 	\section{Opladen via Netspanning}
 	De generator is ook op te laden via netspanning. Hiervoor zit de \textbf{“POWER IN”} poort op de aansturingskast. Hiermee kunnen door middel van een schuko naar IEC C13 snoer de interne batterijen worden opgeladen. 
 	
@@ -175,6 +192,44 @@
 			project56@192.168.1.101 password:
 		\end{lstlisting}
         Hier voer je in het wachtwoord: project56 (het wachtwoord dat je in typt wordt niet getoond in de terminal)
+    \end{itemize}
+
+    \section{MQTT}
+    \subsection{automatisch opstarten MQTT}
+
+    \begin{itemize}
+        \item Stap 1: voer dit in bij de terminal
+        \begin{lstlisting}
+			sudo nano /ect/systemd/system/chromium-startup.service
+		\end{lstlisting}
+            \item Stap 2: kopieer (CTRL c) de onderstaande tekst en plak (CTRL v) deze in de terminal.
+        \begin{lstlisting}
+			[Unit]
+            Description=Start Chromium after graphical session
+            After=graphical.target
+
+            [Service]
+            Type=simple
+            User=pi
+            Environment=DISPLAY=:0
+            Environment=XAUTHORITY=/home/pi/.Xauthority
+            ExecStart=/usr/bin/chromium --incognito --noerrdialogs http://192.168.1.101
+            Restart=on-failure
+
+            [Install]
+            WantedBy=graphical.target
+		\end{lstlisting}
+        Type vervolgends CTRL x in op het op te slaan. en druk dan op ENter
+        \item Stap 3: Type vervolgends:
+        \begin{lstlisting}
+			sudo systemct1 enable chromium-startup.service
+		\end{lstlisting}
+        Druk daarna op ENTER
+        \item Stap 4: Type dan:
+        \begin{lstlisting}
+			sudo systemct1 start chromium-startup.service
+		\end{lstlisting}
+        en druk vervolgends op ENTER.
     \end{itemize}
     
 	\section{Docker}
