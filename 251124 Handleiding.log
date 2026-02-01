@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.11.19)  1 FEB 2026 20:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.11.19)  1 FEB 2026 21:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -950,7 +950,7 @@ nput line 120.
 [4{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc}
 ]
-<Elektrisch-schema.png, id=211, 1095.09125pt x 600.2425pt>
+<Elektrisch-schema.png, id=231, 1095.09125pt x 600.2425pt>
 File: Elektrisch-schema.png Graphic file (type png)
 <use Elektrisch-schema.png>
 Package pdftex.def Info: Elektrisch-schema.png  used on input line 130.
@@ -968,70 +968,79 @@ nput line 141.
 [6
 
 {/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc}]
- (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
+
+
+[7] (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 162.
+nput line 215.
 
-
-[7]
 
 [8]
 
 [9]
 
 [10]
+
+[11]
 Chapter 4.
 
 
-[11
+[12
 
 ]
-<ElektraBatterij.png, id=292, 1334.9875pt x 623.32875pt>
+<ElektraBatterij.png, id=343, 1334.9875pt x 623.32875pt>
 File: ElektraBatterij.png Graphic file (type png)
 <use ElektraBatterij.png>
-Package pdftex.def Info: ElektraBatterij.png  used on input line 355.
+Package pdftex.def Info: ElektraBatterij.png  used on input line 408.
 (pdftex.def)             Requested size: 483.69687pt x 225.84387pt.
-<ElektraGenerator.png, id=293, 1333.98375pt x 381.425pt>
+<ElektraGenerator.png, id=344, 1333.98375pt x 381.425pt>
 File: ElektraGenerator.png Graphic file (type png)
 <use ElektraGenerator.png>
-Package pdftex.def Info: ElektraGenerator.png  used on input line 361.
+Package pdftex.def Info: ElektraGenerator.png  used on input line 414.
 (pdftex.def)             Requested size: 483.69687pt x 138.30229pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--369
+Underfull \hbox (badness 10000) in paragraph at lines 402--422
 
  []
 
 
 
-[12 <./ElektraBatterij.png> <./ElektraGenerator.png>]
-<DataEnNetwerk.png, id=304, 1332.98pt x 874.26625pt>
+[13 <./ElektraBatterij.png> <./ElektraGenerator.png>]
+<DataEnNetwerk.png, id=353, 1332.98pt x 874.26625pt>
 File: DataEnNetwerk.png Graphic file (type png)
 <use DataEnNetwerk.png>
-Package pdftex.def Info: DataEnNetwerk.png  used on input line 374.
+Package pdftex.def Info: DataEnNetwerk.png  used on input line 427.
 (pdftex.def)             Requested size: 483.69687pt x 317.24356pt.
 
 
-[13 <./DataEnNetwerk.png>] (./251124 Handleiding.aux)
+[14 <./DataEnNetwerk.png>] (./251124 Handleiding.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `"251124 Handleiding".out' has not changed.
-(rerunfilecheck)             Checksum: CB382D0B25593A78B85979905B5304F6;5347.
+
+
+Package rerunfilecheck Warning: File `"251124 Handleiding".out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `"251124 Handleiding".out':
+(rerunfilecheck)             Before: 7E31A961458E5CBD4A24DAB53B1383CC;6003
+(rerunfilecheck)             After:  23C83CDD5226C5D1F4A01A24F83225DE;6033.
  ) 
 Here is how much of TeX's memory you used:
- 34541 strings out of 473190
- 744834 string characters out of 5715799
- 1302551 words of memory out of 5000000
- 57246 multiletter control sequences out of 15000+600000
+ 34575 strings out of 473190
+ 745329 string characters out of 5715799
+ 1311698 words of memory out of 5000000
+ 57250 multiletter control sequences out of 15000+600000
  568330 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,7n,101p,479b,2636s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,7n,101p,479b,1345s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/fontawesome5/FontAweso
 me5Free-Solid.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfont
@@ -1046,10 +1055,10 @@ pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.p
 fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pf
 b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on "251124 Handleiding.pdf" (14 pages, 1334846 bytes).
+Output written on "251124 Handleiding.pdf" (15 pages, 1342728 bytes).
 PDF statistics:
- 397 PDF objects out of 1000 (max. 8388607)
- 316 compressed objects within 4 object streams
- 86 named destinations out of 1000 (max. 500000)
- 401 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 452 PDF objects out of 1000 (max. 8388607)
+ 370 compressed objects within 4 object streams
+ 116 named destinations out of 1000 (max. 500000)
+ 433 words of extra memory for PDF output out of 10000 (max. 10000000)
 
