@@ -213,30 +213,103 @@
 		 
 		 \item Stap 6: Start de Docker build
 		 \begin{lstlisting}[language=Bash, caption={Building the Docker container}]
-		 	docker build -t MobileGenerator .
+		 	docker compose up -d
 		 \end{lstlisting} 
 		 
-		 \item Stap 7: Controleer of de Docker build is gelukt. Dit kan worden gedaan met het uitvoeren van
-		 \begin{lstlisting}[language=Bash, caption={Checking if the container has been built succesfully}]
-		 	docker images
+		 \item Stap 7: Controleer of alles draait. Dit doe je doormiddel van:
+		 \begin{lstlisting}[language=Bash, caption={Checking if the container was build succesfully}]
+		 	docker ps
 		 \end{lstlisting} 
-		 Hier zou nu de naam van de container tussen moeten staan ($MobileGenerator$ in dit geval, tenzij een andere naam is ingevuld)
+		 Als alles draait zie je de volgende containers staan:
+		 \begin{itemize}
+		 	\item \textit{MobileGenerator}
+		 	\item \textit{mysql\_db}
+		 \end{itemize}
 		 
-		 \item Stap 8: Nu kan de container worden gestart. Dit kan worden gedaan door het volgende uit te voeren
-		 \begin{lstlisting}[language=Bash, caption={Starting the Docker container}]
-		 	docker run MobileGenerator -p'3001:3000/tcp' -p '32848:32848/tcp -v' /home/pi/PROJECTMAP ':'/workspace':'rw' -d
-		 \end{lstlisting} 
-		 \begin{informationbox}
-		 	-d is niet verplicht. Dit is alleen nodig als de container op de achtergrond moet draaien (wat in de meeste gevallen zo is)
-		 \end{informationbox}
-		 	
-		 	\item Stap 9: USB-Stick veilig verwijderen (belangrijk!)
+		 	\item Stap 8: USB-Stick veilig verwijderen (belangrijk!)
 		 	\\
 		 	Zodra alles gekopieerd en opgebouwd is moet de USB-stick veilig verwijderd worden. Dit kan door het uitvoeren van
 		 	\begin{lstlisting}[language=Bash, caption={Safely removing the USB-stick}]
 		 		sudo unmount /media/pi/NAAMUSB
 		 	\end{lstlisting} 
 		 	Hierna kan de USB-stick uit de PI verwijderd worden
+	\end{itemize}
+	
+	\newpage
+	\section{Tailscale}
+	\subsection{Installatie van Tailscale op de Raspberry Pi}
+	
+	\begin{itemize}
+		\item Stap 0: Open de terminal aan de hand van de instructies in hoofdstuk 3.2.1 (Raspberry Pi terminal).
+		
+		\item Stap 1: Zorg ervoor dat het systeem up-to-date is door het volgende in te voeren:
+		\begin{lstlisting}[language=Bash]
+			sudo apt update && sudo apt upgrade -y
+		\end{lstlisting}
+		
+		\item Stap 2: Download en installeer Tailscale via het officiële installatie-script:
+		\begin{lstlisting}[language=Bash]
+			curl -fsSL https://tailscale.com/install.sh | sh
+		\end{lstlisting}
+		Dit script installeert Tailscale automatisch voor jouw besturingssysteem (Raspberry Pi OS).
+		
+		\item Stap 3: Controleer of Tailscale correct is geïnstalleerd:
+		\begin{lstlisting}[language=Bash]
+			tailscale version
+		\end{lstlisting}
+		Als alles goed is gegaan, zie je nu de versie van Tailscale.
+	\end{itemize}
+	
+	\subsection{Tailscale verbinden met een account}
+	
+	\begin{itemize}
+		\item Stap 1: Start Tailscale met het volgende commando:
+		\begin{lstlisting}[language=Bash]
+			sudo tailscale up
+		\end{lstlisting}
+		
+		\item Stap 2: Na het uitvoeren van dit commando verschijnt er een URL in de terminal, bijvoorbeeld:
+		\begin{lstlisting}
+			https://login.tailscale.com/a/abcdef123456
+		\end{lstlisting}
+		
+		\item Stap 3: Kopieer deze link en open deze in een webbrowser op je laptop of PC.
+		
+		\item Stap 4: Log in met je Tailscale-account (bijvoorbeeld via Google, Microsoft of GitHub).
+		
+		\item Stap 5: Na het inloggen wordt de Raspberry Pi automatisch toegevoegd aan je Tailscale-netwerk.
+	\end{itemize}
+	
+	\subsection{Controleren of Tailscale werkt}
+	
+	\begin{itemize}
+		\item Stap 1: Controleer de status van Tailscale met:
+		\begin{lstlisting}[language=Bash]
+			tailscale status
+		\end{lstlisting}
+		
+		\item Stap 2: Je ziet nu een lijst met apparaten die verbonden zijn met jouw Tailscale-netwerk.  
+		Hier zou ook de Raspberry Pi tussen moeten staan.
+		
+		\item Stap 3: Noteer het Tailscale-IP-adres van de Raspberry Pi (bijvoorbeeld \texttt{100.x.x.x}).  
+		Dit IP-adres kan worden gebruikt om de Raspberry Pi veilig op afstand te bereiken.
+	\end{itemize}
+	
+	\subsection{Automatisch opstarten van Tailscale}
+	
+	\begin{itemize}
+		\item Stap 1: Controleer of de Tailscale service automatisch start bij het opstarten:
+		\begin{lstlisting}[language=Bash]
+			sudo systemctl status tailscaled
+		\end{lstlisting}
+		
+		\item Stap 2: Als de service nog niet actief is, start deze handmatig:
+		\begin{lstlisting}[language=Bash]
+			sudo systemctl enable tailscaled
+			sudo systemctl start tailscaled
+		\end{lstlisting}
+		
+		\item Stap 3: Tailscale zal nu automatisch starten bij elke reboot van de Raspberry Pi.
 	\end{itemize}
 	
 	

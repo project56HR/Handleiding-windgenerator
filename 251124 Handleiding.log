@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.11.19)  2 DEC 2025 12:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.11.19)  1 FEB 2026 20:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -950,7 +950,7 @@ nput line 120.
 [4{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc}
 ]
-<Elektrisch-schema.png, id=186, 1095.09125pt x 600.2425pt>
+<Elektrisch-schema.png, id=211, 1095.09125pt x 600.2425pt>
 File: Elektrisch-schema.png Graphic file (type png)
 <use Elektrisch-schema.png>
 Package pdftex.def Info: Elektrisch-schema.png  used on input line 130.
@@ -981,50 +981,54 @@ nput line 162.
 [7]
 
 [8]
+
+[9]
+
+[10]
 Chapter 4.
 
 
-[9
+[11
 
 ]
-<ElektraBatterij.png, id=242, 1334.9875pt x 623.32875pt>
+<ElektraBatterij.png, id=292, 1334.9875pt x 623.32875pt>
 File: ElektraBatterij.png Graphic file (type png)
 <use ElektraBatterij.png>
-Package pdftex.def Info: ElektraBatterij.png  used on input line 282.
+Package pdftex.def Info: ElektraBatterij.png  used on input line 355.
 (pdftex.def)             Requested size: 483.69687pt x 225.84387pt.
-<ElektraGenerator.png, id=243, 1333.98375pt x 381.425pt>
+<ElektraGenerator.png, id=293, 1333.98375pt x 381.425pt>
 File: ElektraGenerator.png Graphic file (type png)
 <use ElektraGenerator.png>
-Package pdftex.def Info: ElektraGenerator.png  used on input line 288.
+Package pdftex.def Info: ElektraGenerator.png  used on input line 361.
 (pdftex.def)             Requested size: 483.69687pt x 138.30229pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--296
+Underfull \hbox (badness 10000) in paragraph at lines 349--369
 
  []
 
 
 
-[10 <./ElektraBatterij.png> <./ElektraGenerator.png>]
-<DataEnNetwerk.png, id=252, 1332.98pt x 874.26625pt>
+[12 <./ElektraBatterij.png> <./ElektraGenerator.png>]
+<DataEnNetwerk.png, id=304, 1332.98pt x 874.26625pt>
 File: DataEnNetwerk.png Graphic file (type png)
 <use DataEnNetwerk.png>
-Package pdftex.def Info: DataEnNetwerk.png  used on input line 301.
+Package pdftex.def Info: DataEnNetwerk.png  used on input line 374.
 (pdftex.def)             Requested size: 483.69687pt x 317.24356pt.
 
 
-[11 <./DataEnNetwerk.png>] (./251124 Handleiding.aux)
+[13 <./DataEnNetwerk.png>] (./251124 Handleiding.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `"251124 Handleiding".out' has not changed.
-(rerunfilecheck)             Checksum: 0674C47ABBA92622085BB07DC8822BC7;4231.
+(rerunfilecheck)             Checksum: CB382D0B25593A78B85979905B5304F6;5347.
  ) 
 Here is how much of TeX's memory you used:
- 34505 strings out of 473190
- 744343 string characters out of 5715799
- 1304548 words of memory out of 5000000
- 57232 multiletter control sequences out of 15000+600000
+ 34541 strings out of 473190
+ 744834 string characters out of 5715799
+ 1302551 words of memory out of 5000000
+ 57246 multiletter control sequences out of 15000+600000
  568330 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,7n,101p,479b,2636s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1037,14 +1041,15 @@ s/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
-.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.
-pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pf
-b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-
-Output written on "251124 Handleiding.pdf" (12 pages, 1316833 bytes).
+.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.
+pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.p
+fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pf
+b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on "251124 Handleiding.pdf" (14 pages, 1334846 bytes).
 PDF statistics:
- 332 PDF objects out of 1000 (max. 8388607)
- 258 compressed objects within 3 object streams
- 64 named destinations out of 1000 (max. 500000)
- 361 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 397 PDF objects out of 1000 (max. 8388607)
+ 316 compressed objects within 4 object streams
+ 86 named destinations out of 1000 (max. 500000)
+ 401 words of extra memory for PDF output out of 10000 (max. 10000000)
 
