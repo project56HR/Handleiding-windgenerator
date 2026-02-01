@@ -8,6 +8,8 @@
 \usepackage[most]{tcolorbox}
 \usepackage{fontawesome5}
 \usepackage{hyperref}
+\usepackage{colortbl}
+\usepackage{subcaption}
 
 \newtcolorbox{warningbox}{
 	colback=red!10,
@@ -64,7 +66,7 @@
 	\title{Handleiding Mobiele Windgenerator\\
     \small Project 5-6 Hogeschool Rotterdam Technische Informatica\\
 	\small Gemaakt in opdracht van MIND}
-	\author{\small Gemaakt door Hannah Saunders, Berkin Demirel, Sem Hoogstad en Mike Verkaik}
+	\author{\small Gemaakt door Hannah Saunders (1093894), Berkin Demirel (1077286), Sem Hoogstad (1094004) en Mike Verkaik (1091369)}
 	\date{19 November 2025}
 	\maketitle
 	
@@ -76,28 +78,47 @@
 	Deze handleiding is gemaakt voor de Mobiele Windgenerator van MIND (Military Innovation by Doing) en bestaat uit drie delen. Het algemene deel, het technische deel (ICT) en de Installatiehandleiding. 
 	\\
 	\\
-	Het algemene deel is bedoeld voor snelle oplossingen en algemene info (denk aan het aansluiten van de generator, eventuele kleine storingen/fouten oplossen, enz.). 
+	Het algemene deel is bedoeld voor snelle oplossingen en algemene info, denk aan het aansluiten van de generator, eventuele kleine storingen/fouten oplossen, enz. 
 	\\
 	\\
 	Het technische doel is bedoeld voor grootschalig onderhoud aan de apparatuur. Denk hierbij aan het updaten van software, aanpassen van verschillende instellingen enz. 
 	\\
 	\\
-	De Installatiehandleiding is gemaakt voor wanneer de windgenerator vanaf 0 wordt opgebouwd.
+	De Installatiehandleiding is gemaakt voor wanneer de windgenerator vanaf nul wordt opgebouwd.
 	
 	\newpage
 	\chapter{Algemene Handleiding}
-	\setcounter{section}{1}
 	\section{Aansluiten en opstarten van de generator}
-	De windgenerator wordt aangesloten aan de aansturingskast. Hier zitten vier verschillende poorten op. De stekker die van de windgenerator af komt past maar op een van deze poorten, namelijk de poort gelabeld \textbf{“GEN IN”}. 
-	\\
-	\\
-	Schakel vervolgens het systeem in. Dit kan worden gedaan via de schakelaar \textbf{“SYSTEM”} worden gedaan. Zodra deze omgehaald is zal het scherm op de aansturingskast opstarten en zullen alle interne systemen opstarten. 
-	\\
-	\\
+	De windgenerator wordt aangesloten aan de aansturingskast. Hier zitten vier verschillende poorten op. De stekker die van de windgenerator af komt past maar op een van deze poorten, namelijk de poort gelabeld \textbf{“GEN IN”}.  zie afbeelding (a) hieronder
+\begin{figure}[h]
+\begin{subfigure}{0.5\linewidth}
+\includegraphics[width=1.2\linewidth, height=8cm]{.jpg} 
+\caption{aansturings kast}
+\label{fig:aansturings kast}
+\end{subfigure}
+\begin{subfigure}{0.5\linewidth}
+\centering
+\includegraphics[width=0.5\linewidth, height=8cm]{systeemShakelaar.jpg}
+\caption{systeem schakelaar}
+\label{fig:systeem schakelaar}
+\end{subfigure}
+\end{figure}
+
+    
+    Schakel vervolgens het systeem in. Dit kan worden gedaan via de schakelaar \textbf{“SYSTEM”} worden gedaan. Zodra deze omgehaald is zal het scherm op de aansturingskast opstarten en zullen alle interne systemen opstarten. zie afbeelding (b) hierboven
+    \\
+    \\
 	Haal vervolgens de schakelaar \textbf{“GENERATOR”} op de aansturingskast om naar de RUN positie. De windgenerator is nu klaar om gebruikt te worden. Via de schuko aansluiting op de aansturingskast (gelabeld \textbf{“POWER OUT”}) kan 230v AC verkregen worden vanuit de batterijen. 
-	
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.25\linewidth]{schakelaar.jpg}
+    \caption{Enter Caption}
+    \label{fig:placeholder}
+\end{figure}
+	\newpage
 	\section{Opladen via Netspanning}
-	De generator is ook op te laden via netspanning. Hiervoor zit de \textbf{“POWER IN”} poort op de aansturingskast. Hiermee kunnen d.m.v. een schuko naar IEC C13 snoer de interne batterijen worden opgeladen. 
+	De generator is ook op te laden via netspanning. Hiervoor zit de \textbf{“POWER IN”} poort op de aansturingskast. Hiermee kunnen door middel van een schuko naar IEC C13 snoer de interne batterijen worden opgeladen. 
 	
 	\newpage
 	\section{Fouten, Foutcodes en andere problemen}
@@ -105,17 +126,17 @@
 	Dit betekent dat de batterijen niet voldoende opgeladen zijn en het systeem het ontladen van de batterijen uitschakelt. Laat de batterijen ophalen totdat er op het remote dashboard staat dat het systeem weer klaar is om energie te leveren. 
 	
 	\subsection{Verbinding verbroken tussen inverter/Batterij beheer }
-	Zodra er een melding met de beschrijving \textbf{“Connection to BMS lost”} verschijnt op het scherm van de aansturingskast, betekent dit dat de verbinding tussen de inverter, de BMS en het beheersysteem verbroken is. Dit is op te lossen door te controleren of alle netwerkkabels nog verbonden zijn aan de correcte poorten. Zie ‘Schematische tekeningen systeem’ voor de handleiding/tekening hoe dit aan te sluiten is 
+	Zodra er een melding met de beschrijving \textbf{“Connection to BMS lost”} verschijnt op het scherm van de aansturingskast, betekent dit dat de verbinding tussen de inverter, de BMS en het beheersysteem verbroken is. Dit is op te lossen door te controleren of alle netwerkkabels nog verbonden zijn aan de correcte poorten. Zie ‘Zie figuur 2.1’ voor de handleiding/tekening hoe dit aan te sluiten is 
 	
 	\subsection{Batterijen laden niet op}
-	Dit kan komen doordat een van de zekeringen is gesprongen in de aansturingskast. Deze zijn makkelijk te resetten. Er zijn in de aansturingskast in totaal 4 zekeringen: 
+	Dit kan komen doordat een van de zekeringen is gesprongen in de aansturingskast. Deze zijn makkelijk te resetten. De zekeringen zijn te resetten door op de rode knop te drukken en vervolgens de hendel terug te duwen. Er zijn in de aansturingskast in totaal 4 zekeringen: 
 	\begin{itemize}
 		\item Een zekering tussen de generator en de aanvoer naar de charge controller 
 		\item Een zekering tussen de charge controller en de batterijen 
 		\item Een zekering tussen de Power In poort en de Inverter 
 		\item Een zekering tussen de Power Out poort en de Inverter 
 	\end{itemize}
-	Zodra deze gereset zijn zullen de batterijen weer opladen. 
+	Zodra deze gereset zijn zal het weer mogelijk zijn om de batterijen weer op te laden met de windgenerator. 
 	
 	\begin{informationbox}
 		Blijft de generator storingen melden? Neem dan contact op met MIND.
@@ -133,7 +154,7 @@
 	\end{figure}
 	
 	\subsection{Aansluiting Netwerkkabels}
-	Op de Victron VE.Bus BMS v2 zitten 2 netwerkpoorten. De \textbf{“Remote Panel”} poort en de \textbf{“Multiplus/Quatro”} poort. Verbindt de \textbf{“Remote Panel”} poort met een van de \textbf{ BUS”} poorten op het beeldscherm wat op de aansturingskast gemonteerd zit. Verbindt de \textbf{“Multiplus/Quatro”} poort aan de Multiplus Inverter. Hierop zit maar 1 netwerkpoort 
+	Op de Victron VE.Bus BMS v2 zitten 2 netwerkpoorten. De \textbf{“Remote Panel”} poort en de \textbf{“Multiplus/Quatro”} poort. Verbindt de \textbf{“Remote Panel”} poort met een van de \textbf{ BUS”} poorten op het beeldscherm wat op de aansturingskast gemonteerd zit. Verbindt de \textbf{“Multiplus/Quatro”} poort aan de Multiplus Inverter. Hierop zit maar 1 netwerkpoort.
 	
 	\newpage
 	
@@ -144,7 +165,9 @@
 	\section{Raspberry PI}
 	\subsection{Flashing PI-OS}
 	\begin{itemize}
-		\item Stap 1: Download de Raspberry PI Imager en installeer deze op een computer.
+		\item Stap 1: Download de Raspberry PI Imager en installeer deze op een computer.\\
+            Het programma voor het instaleren van de imager is te vinden op:\\ \url{https://www.raspberrypi.com/software/}\\
+            Volg vervolgens de instructies van het programma.
 		\item Stap 2: Stop een Micro-SD kaart van minimaal 32gb in de computer (Niet de PI) 
 		\item Stap 3: Open Raspberry PI Imager. Selecteer hier de SD kaart en vervolgens het operating system wat je wilt installeren (Raspberri PI OS) 
 		\item Stap 4: Klik op \textbf{“Next”} en vervolgens op \textbf{“Edit Settings”}
@@ -155,10 +178,64 @@
 	\end{itemize}
 	
 	\newpage
-	
+	\section{Raspberry pi terminal}
+    \subsection{Opening a terminal in the pi}
+    \begin{itemize}
+        \item Stap 1: verbindt een laptop via een netwerk kabel aan de Pi.
+        \item Stap 2: Open de terminal op de laptop.
+        \item Stap 3: type het volgende in de terminal en druk op enter.
+         \begin{lstlisting}
+			ssh project56@192.168.1.101
+		\end{lstlisting}
+        \item Stap 4: vervolgends zie je dit:
+        \begin{lstlisting}
+			project56@192.168.1.101 password:
+		\end{lstlisting}
+        Hier voer je in het wachtwoord: project56 (het wachtwoord dat je in typt wordt niet getoond in de terminal)
+    \end{itemize}
+
+    \section{MQTT}
+    \subsection{automatisch opstarten MQTT}
+
+    \begin{itemize}
+        \item Stap 1: voer dit in bij de terminal
+        \begin{lstlisting}
+			sudo nano /ect/systemd/system/chromium-startup.service
+		\end{lstlisting}
+            \item Stap 2: kopieer (CTRL c) de onderstaande tekst en plak (CTRL v) deze in de terminal.
+        \begin{lstlisting}
+			[Unit]
+            Description=Start Chromium after graphical session
+            After=graphical.target
+
+            [Service]
+            Type=simple
+            User=pi
+            Environment=DISPLAY=:0
+            Environment=XAUTHORITY=/home/pi/.Xauthority
+            ExecStart=/usr/bin/chromium --incognito --noerrdialogs http://192.168.1.101
+            Restart=on-failure
+
+            [Install]
+            WantedBy=graphical.target
+		\end{lstlisting}
+        Type vervolgends CTRL x in op het op te slaan. en druk dan op ENter
+        \item Stap 3: Type vervolgends:
+        \begin{lstlisting}
+			sudo systemct1 enable chromium-startup.service
+		\end{lstlisting}
+        Druk daarna op ENTER
+        \item Stap 4: Type dan:
+        \begin{lstlisting}
+			sudo systemct1 start chromium-startup.service
+		\end{lstlisting}
+        en druk vervolgends op ENTER.
+    \end{itemize}
+    
 	\section{Docker}
 	\subsection{Installatie van de Docker}
 	\begin{itemize}
+        \item Stap 0: open de terminal aan de hand van de instructies in hoofdstuk 3.2.1.
 		\item Stap 1:  Verifieer dat Docker is geïnstalleerd doormiddel van het uitvoeren van: \begin{lstlisting}[language=Bash, caption={Verifying that docker is installed}]
 			docker -v
 		\end{lstlisting} Dan moet je iets zien van Docker version 27.1.1, build 6312585. 
@@ -187,6 +264,7 @@
 	
 	\subsection{Folder van USB-Stick halen en Docker build uitvoeren}
 	\begin{itemize}
+        \item Stap 0: Open de terminal aan de hand van de instructies in hoofdstuk 3.2.1.
 		\item Stap 1: Steek de USB-stick in de Raspberry PI. Deze wordt vaak vanzelf gemount onder $/media/pi/NAAMUSB$
 		\item Stap 2: Controleer of de USB-stick zichtbaar is. Dit kan worden gedaan door 
 		\begin{lstlisting}[language=Bash, caption={Checking if USB stick is working}]
@@ -364,8 +442,7 @@
 	\end{figure}
 	\begin{warningbox}
 		Raadpleeg voor het installeren en aansluiten van de windgenerator de handleiding
-		voor de Superwind SW353. Deze is te vinden op de website van SuperWind en zal ook
-		worden meegeleverd met het product zelf.
+		voor de Superwind SW353. Deze is te vinden op de website van SuperWind: \url{https://www.superwind.com/fileadmin/user_upload/Downloads/350/SW350-II_Operation_Manual.pdf} en zal ook	worden meegeleverd met het product zelf.
 	\end{warningbox}
 	\newpage
 	\subsection{Netwerk en Data}
@@ -382,8 +459,28 @@
 	\section{Hardware en monteren steigerbuis}
 	Monteer de steigerbuis voet aan een stevige en verzwaarde basis. Vervolgens kan de steigerbuis in de voet worden geschoven en worden vastgeschroeft met een inbussleutel (type 8).
 	\\
-	De kop van de windgenerator wordt op 4 punten aan de steigerbuis vastgeschroeft. Hier moeten 4 $... mm$ gaten voor worden geboord, die elk op 90 graden van elkaar in de buis moeten worden geboord.jven
-	
+	De kop van de windgenerator wordt op 4 punten aan de steigerbuis vastgeschroeft. Hier moeten 4 $... mm$ gaten voor worden geboord, die elk op 90 graden van elkaar in de buis moeten worden geboord.
+    \\
+    
+    \newpage 
+    \chapter{Changelog}
+    \begin{table}[h]
+    \arrayrulecolor{black}
+        \begin{tabular}{|c|c|c|}
+        \hline
+            Date & version & description\\
+            \hline
+            25/11/2015 & 1.0 & creatie document\\
+            \hline
+            01/12/2025 & 2.0 & update manual\\
+            \hline
+            02/12/2025 & 3.0 & update\\
+            \hline
+            26/01/2026 & 3.1 & updates uitgevoerd aan de hand van feedback\\
+            \hline
+        \end{tabular}
+    \end{table}
+    
 	
 	
 \end{document}
